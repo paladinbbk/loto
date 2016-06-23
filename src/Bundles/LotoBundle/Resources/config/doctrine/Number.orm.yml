@@ -1,0 +1,17 @@
+Bundles\LotoBundle\Entity\Number:
+    type: entity
+    table: null
+    repositoryClass: Bundles\LotoBundle\Repository\NumberRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        number:
+            type: integer
+        status:
+            type: smallint
+            nullable: true
+    lifecycleCallbacks: {  }

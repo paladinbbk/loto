@@ -1,0 +1,32 @@
+Bundles\LotoBundle\Entity\Room:
+    type: entity
+    table: null
+    repositoryClass: Bundles\LotoBundle\Repository\RoomRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: integer
+        limitUser:
+            type: string
+            length: 255
+        privateIs:
+            type: boolean
+            nullable: true
+            column: private_is
+        fastIs:
+            type: boolean
+            nullable: true
+            column: fast_is
+        crazyIs:
+            type: boolean
+            nullable: true
+            column: crazy_is
+        rate:
+            type: integer
+            nullable: true
+    lifecycleCallbacks: {  }

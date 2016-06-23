@@ -1,0 +1,43 @@
+Bundles\LotoBundle\Entity\Player:
+    type: entity
+    table: null
+    repositoryClass: Bundles\LotoBundle\Repository\PlayerRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        wins:
+            type: integer
+            nullable: true
+        rating:
+            type: integer
+            nullable: true
+        wallet:
+            type: integer
+            nullable: true
+        avatar:
+            type: string
+            length: 255
+            nullable: true
+    manyToMany:
+        friends:
+            targetEntity: Player
+            invercedBy: friendWithMe
+            joinTable: 
+                name: friends
+                joinColumns:
+                    player_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    friend_player_id:
+                        referencedColumnName: id
+        friendWithMe:
+            targetEntity: Player
+            mappedBy: friends
+    lifecycleCallbacks: {  }

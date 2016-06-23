@@ -1,0 +1,3 @@
+bundles_loto_homepage:
+    path:     /
+    defaults: { _controller: BundlesLotoBundle:Default:index }

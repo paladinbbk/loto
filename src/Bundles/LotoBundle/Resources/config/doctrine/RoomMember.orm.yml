@@ -1,0 +1,11 @@
+Bundles\LotoBundle\Entity\RoomMember:
+    type: entity
+    table: null
+    repositoryClass: Bundles\LotoBundle\Repository\RoomMemberRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

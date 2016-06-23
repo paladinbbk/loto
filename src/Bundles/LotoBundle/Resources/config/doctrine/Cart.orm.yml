@@ -1,0 +1,11 @@
+Bundles\LotoBundle\Entity\Cart:
+    type: entity
+    table: null
+    repositoryClass: Bundles\LotoBundle\Repository\CartRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }
