@@ -1,6 +1,6 @@
 Bundles\LotoBundle\Entity\Player:
     type: entity
-    table: null
+    table: player
     repositoryClass: Bundles\LotoBundle\Repository\PlayerRepository
     id:
         id:
@@ -40,4 +40,8 @@ Bundles\LotoBundle\Entity\Player:
         friendWithMe:
             targetEntity: Player
             mappedBy: friends
+    oneToMany:
+        roomMembers:
+            targetEntity: RoomMember
+            mappedBy: player
     lifecycleCallbacks: {  }

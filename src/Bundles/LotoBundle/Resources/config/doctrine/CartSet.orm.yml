@@ -1,0 +1,15 @@
+Bundles\LotoBundle\Entity\CartSet:
+    type: entity
+    table: carts_set
+    repositoryClass: Bundles\LotoBundle\Repository\CartSetRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    oneToMany:
+        carts:
+            targetEntity: Cart
+            mappedBy: cartSet
+    lifecycleCallbacks: {  }

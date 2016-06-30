@@ -220,4 +220,49 @@ class Room
     {
         return $this->privateIs;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $roomMembers;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->roomMembers = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add roomMembers
+     *
+     * @param \Bundles\LotoBundle\Entity\RoomMember $roomMembers
+     * @return Room
+     */
+    public function addRoomMember(\Bundles\LotoBundle\Entity\RoomMember $roomMembers)
+    {
+        $this->roomMembers[] = $roomMembers;
+
+        return $this;
+    }
+
+    /**
+     * Remove roomMembers
+     *
+     * @param \Bundles\LotoBundle\Entity\RoomMember $roomMembers
+     */
+    public function removeRoomMember(\Bundles\LotoBundle\Entity\RoomMember $roomMembers)
+    {
+        $this->roomMembers->removeElement($roomMembers);
+    }
+
+    /**
+     * Get roomMembers
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getRoomMembers()
+    {
+        return $this->roomMembers;
+    }
 }

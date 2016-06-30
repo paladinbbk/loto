@@ -1,6 +1,6 @@
 Bundles\LotoBundle\Entity\RoomMember:
     type: entity
-    table: null
+    table: room_members
     repositoryClass: Bundles\LotoBundle\Repository\RoomMemberRepository
     id:
         id:
@@ -8,4 +8,24 @@ Bundles\LotoBundle\Entity\RoomMember:
             id: true
             generator:
                 strategy: AUTO
+    manyToOne:
+        player:
+            targetEntity: Player
+            inversedBy: roomMembers
+            joinColumn:
+                name: player_id
+                referencedColumnName: id
+        room:
+            targetEntity: Room
+            inversedBy: roomMembers
+            joinColumn:
+                name: room_id
+                referencedColumnName: id
+    oneToOne:
+        cartSet:
+            targetEntity: CartSet
+            inversedBy: roomMember
+            joinColumn:
+                name: cart_set_id
+                referencedColumnName: id
     lifecycleCallbacks: {  }

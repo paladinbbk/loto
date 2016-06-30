@@ -1,6 +1,6 @@
 Bundles\LotoBundle\Entity\Room:
     type: entity
-    table: null
+    table: rooms
     repositoryClass: Bundles\LotoBundle\Repository\RoomRepository
     id:
         id:
@@ -29,4 +29,8 @@ Bundles\LotoBundle\Entity\Room:
         rate:
             type: integer
             nullable: true
+    oneToMany:
+        roomMembers:
+            targetEntity: RoomMember
+            mappedBy: room
     lifecycleCallbacks: {  }

@@ -1,6 +1,6 @@
 Bundles\LotoBundle\Entity\Cart:
     type: entity
-    table: null
+    table: carts
     repositoryClass: Bundles\LotoBundle\Repository\CartRepository
     id:
         id:
@@ -8,4 +8,15 @@ Bundles\LotoBundle\Entity\Cart:
             id: true
             generator:
                 strategy: AUTO
+    oneToMany:
+        rows:
+            targetEntity: Row
+            mappedBy: cart
+    manyToOne:
+        cartSet:
+            targetEntity: CartSet
+            inversedBy: carts
+            joinColumn:
+                name: cart_set_id
+                referencedColumnName: id
     lifecycleCallbacks: {  }

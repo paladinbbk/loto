@@ -1,6 +1,6 @@
 Bundles\LotoBundle\Entity\Number:
     type: entity
-    table: null
+    table: number
     repositoryClass: Bundles\LotoBundle\Repository\NumberRepository
     id:
         id:
@@ -14,4 +14,11 @@ Bundles\LotoBundle\Entity\Number:
         status:
             type: smallint
             nullable: true
+    manyToOne:
+        row:
+            targetEntity: Row
+            inversedBy: numbers
+            joinColumn:
+                name: row_id
+                referencedColumnName: id
     lifecycleCallbacks: {  }
