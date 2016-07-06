@@ -1,4 +1,10 @@
 services:
-#    bundles_loto.example:
-#        class: Bundles\LotoBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
+    bundles_loto.numbers_generate:
+        class: Bundles\LotoBundle\Service\NumberGenerator
+        arguments: ["@service_container"]
+
+    bundles_loto.room_repository:
+        class: Bundles\LotoBundle\Repository\RoomRepository
+        factory: ["@doctrine.orm.entity_manager", "getRepository"]
+        arguments: 
+            - "BundlesLotoBundle:Room"

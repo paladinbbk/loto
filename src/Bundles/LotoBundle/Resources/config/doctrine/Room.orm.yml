@@ -10,10 +10,10 @@ Bundles\LotoBundle\Entity\Room:
                 strategy: AUTO
     fields:
         name:
-            type: integer
-        limitUser:
             type: string
             length: 255
+        limitUser:
+            type: integer
         privateIs:
             type: boolean
             nullable: true
@@ -29,6 +29,10 @@ Bundles\LotoBundle\Entity\Room:
         rate:
             type: integer
             nullable: true
+        winningNumbers:
+            type: string
+            length: 4095
+            column: winning_numbers
     oneToMany:
         roomMembers:
             targetEntity: RoomMember

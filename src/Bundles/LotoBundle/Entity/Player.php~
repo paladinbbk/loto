@@ -248,4 +248,42 @@ class Player
     {
         return $this->friendWithMe;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $roomMembers;
+
+
+    /**
+     * Add roomMembers
+     *
+     * @param \Bundles\LotoBundle\Entity\RoomMember $roomMembers
+     * @return Player
+     */
+    public function addRoomMember(\Bundles\LotoBundle\Entity\RoomMember $roomMembers)
+    {
+        $this->roomMembers[] = $roomMembers;
+
+        return $this;
+    }
+
+    /**
+     * Remove roomMembers
+     *
+     * @param \Bundles\LotoBundle\Entity\RoomMember $roomMembers
+     */
+    public function removeRoomMember(\Bundles\LotoBundle\Entity\RoomMember $roomMembers)
+    {
+        $this->roomMembers->removeElement($roomMembers);
+    }
+
+    /**
+     * Get roomMembers
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getRoomMembers()
+    {
+        return $this->roomMembers;
+    }
 }

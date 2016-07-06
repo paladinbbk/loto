@@ -80,4 +80,32 @@ class Number
     {
         return $this->status;
     }
+    /**
+     * @var \Bundles\LotoBundle\Entity\Row
+     */
+    private $row;
+
+
+    /**
+     * Set row
+     *
+     * @param \Bundles\LotoBundle\Entity\Row $row
+     * @return Number
+     */
+    public function setRow(\Bundles\LotoBundle\Entity\Row $row = null)
+    {
+        $this->row = $row;
+
+        return $this;
+    }
+
+    /**
+     * Get row
+     *
+     * @return \Bundles\LotoBundle\Entity\Row 
+     */
+    public function getRow()
+    {
+        return $this->row;
+    }
 }

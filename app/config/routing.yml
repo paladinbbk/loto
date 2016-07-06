@@ -1,13 +1,5 @@
-bundles_user:
-    resource: "@BundlesUserBundle/Resources/config/routing.yml"
-    prefix:   /
-
 site_loto:
     resource: "@SiteLotoBundle/Resources/config/routing.yml"
-    prefix:   /
-
-bundles_loto:
-    resource: "@BundlesLotoBundle/Resources/config/routing.yml"
     prefix:   /
 
 fos_user:
