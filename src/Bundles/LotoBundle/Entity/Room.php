@@ -51,7 +51,12 @@ class Room
 
     public function getNumbers()
     {
-        return json_decode($this->winningNumber);
+        return json_decode($this->winningNumbers);
+    }
+    
+    public function setNumbers($nums)
+    {
+        return $this->setWinningNumbers(json_encode($nums));
     }
     
     /**

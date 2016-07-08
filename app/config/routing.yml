@@ -2,5 +2,9 @@ site_loto:
     resource: "@SiteLotoBundle/Resources/config/routing.yml"
     prefix:   /
 
+site_loto_profile:
+    resource: "@SiteLotoBundle/Resources/config/routing/profile.yml"
+    prefix:   /profile
+
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"

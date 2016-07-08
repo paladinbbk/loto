@@ -1,0 +1,186 @@
+ /* 
+	author: Alexey Biserkov
+	home page: http://biserkov.info 
+*/
+
+ @import 'main.less';
+
+/* styles */
+
+ body{
+ 	background-color: @body-color;
+ }
+
+ .top-nav{
+ 	padding: 20px 0;
+ 	float: left;
+ 	width: 100%;
+ 	ul{
+ 		padding: 0;
+ 	}
+ 	li{
+ 		list-style: none;
+ 		display: inline;
+ 	}
+ }
+.users-bar{
+	float: right;
+
+}
+ .user{
+ 	vertical-align: bottom;
+ 	display: inline-block;
+ 	text-align: center;
+ 	margin-bottom: 100px;
+ }
+
+ .user-avatar{
+ 	position: relative;
+ 	overflow: hidden;
+ 	border-radius: 50%;
+ 	width: 100%;
+ 	img{
+ 		min-width: 100%;
+ 		min-height: 100%;
+ 		width: auto;
+ 		height: auto;
+    	max-height: 100%;
+		
+
+ 	}
+ }
+ .user-iam{
+ 	width: 100px;
+ 	width: 100px;
+ 	height: 100px;
+ 	 .user-avatar{
+ 	 	width: 100px;
+ 		height: 100px;
+ 	 }
+ 	
+ }
+ .user-other{
+ 	width: 50px;
+ 	height: 50px;
+ 	.user-avatar{
+ 		width: 50px;
+ 		height: 50px;
+ 	}
+ 	
+ }
+
+ .barrels{
+ 	width: 380px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+    padding: 0;
+ 	li{
+ 		vertical-align: bottom;
+ 		display: inline-block;	
+ 		border: 5px solid #333;
+ 		border-radius: 50%;
+ 		padding: 20px;
+ 		font-size: 18px;
+ 	}
+ 	li:first-child{
+		font-size: 28px;
+ 	}
+ 	
+ }
+
+ .barrels-static{
+ 	width: auto;
+ 	overflow: visible;
+ 	white-space: normal;
+ 	padding: 50px 0;
+ 	li{
+ 		border: 2px solid #333;
+ 		font-size: 16px;
+		padding: 5px;
+		width: 33px;
+		height: 33px;
+		text-align: center;
+ 	}
+ 	li:first-child{
+		font-size: 16px;
+ 	}
+ }
+
+ .game-tickets{
+ 	table{
+ 		font-size: 25px;
+ 		margin: 15px 0; 
+ 		width: 100%;
+ 		td{
+ 			border: 1px solid #333;
+ 			text-align: center;
+ 		}
+ 	}
+ }
+.user-add-coin{
+	td{
+		padding:5px;
+	}
+}
+ .success{
+	color: green;
+ }
+ .error{
+	color: red;
+ }
+.coin-list{
+	min-width: 400px;
+	text-align: center;
+	img{
+ 		width: 50px;
+ 	}
+ 	tr{
+ 		border: 1px solid #ccc;
+ 	}
+ 	td{
+ 		padding: 2px;
+ 		tr{
+ 			border: none;
+ 		}
+ 	}
+}
+ .friend-list{
+ 	
+ 	img{
+ 		width: 50px;
+ 	}
+ 	tr{
+ 		border: 1px solid #ccc;
+ 	}
+ 	td{
+ 		padding: 2px;
+ 		tr{
+ 			border: none;
+ 		}
+ 	}
+ }
+
+ .games-list{
+
+ 	td{
+ 		padding: 5px;
+ 	}
+ 	tr{
+ 		border: 1px solid #ccc;
+ 	}
+ }
+
+ .statistics-users{
+ 	img{
+ 		width: 50px;
+ 	}
+ 	tr{
+ 		border: 1px solid #ccc;
+ 	}
+ 	td{
+
+ 		padding:5px 20px;
+ 		
+ 	}
+ }

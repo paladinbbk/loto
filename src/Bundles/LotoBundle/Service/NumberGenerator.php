@@ -15,7 +15,10 @@ class NumberGenerator
     
     public function generate()
     {
-        $rooms = $this->container->get('bundles_loto.room_repository')->findAll();
+        $repo = $this->container->get('bundles_loto.room_repository');
+//        var_dump($repo->getRooms());
+//        die();
+        $rooms = $repo->findAll();
         foreach ($rooms as $room) {
             $this->generateNumber($room);
         }
@@ -26,10 +29,13 @@ class NumberGenerator
     private function generateNumber($room)
     {
         $numbers = $room->getNumbers();
-        $numbers[] = recursive($numbers);
+        $numbers[] = $this->recursive($numbers);
+        
+        $room->setNumbers($numbers);
+        $em = $this->container->get('doctrine.orm.entity_manager')->flush();
     }
     
-    public function recursive($numbers)
+    private function recursive($numbers)
     {
         $num = rand(1, 90);
         if (!in_array($num, $numbers)) {

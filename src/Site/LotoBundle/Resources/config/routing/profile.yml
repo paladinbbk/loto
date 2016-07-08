@@ -1,0 +1,8 @@
+# Profile
+site_loto_profile_index:
+    path:     /
+    defaults: { _controller: SiteLotoBundle:Profile:index }
+    
+site_loto_profile_edit:
+    path:     /edit
+    defaults: { _controller: SiteLotoBundle:Profile:edit }

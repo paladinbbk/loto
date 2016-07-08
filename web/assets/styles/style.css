@@ -1,0 +1,154 @@
+/* 
+	author: Alexey Biserkov
+	home page: http://biserkov.info 
+*/
+/* styles */
+body {
+  background-color: #fff;
+}
+.top-nav {
+  padding: 20px 0;
+  float: left;
+  width: 100%;
+}
+.top-nav ul {
+  padding: 0;
+}
+.top-nav li {
+  list-style: none;
+  display: inline;
+}
+.users-bar {
+  float: right;
+}
+.user {
+  vertical-align: bottom;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.user-avatar {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 100%;
+}
+.user-avatar img {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  max-height: 100%;
+}
+.user-iam {
+  width: 100px;
+  height: 100px;
+}
+.user-iam .user-avatar {
+  width: 100px;
+  height: 100px;
+}
+.user-other {
+  width: 50px;
+  height: 50px;
+}
+.user-other .user-avatar {
+  width: 50px;
+  height: 50px;
+}
+.barrels {
+  width: 380px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: left;
+  padding: 0;
+}
+.barrels li {
+  vertical-align: bottom;
+  display: inline-block;
+  border: 5px solid #333;
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 18px;
+}
+.barrels li:first-child {
+  font-size: 28px;
+}
+.barrels-static {
+  width: auto;
+  overflow: visible;
+  white-space: normal;
+  padding: 50px 0;
+}
+.barrels-static li {
+  border: 2px solid #333;
+  font-size: 16px;
+  padding: 5px;
+  width: 33px;
+  height: 33px;
+  text-align: center;
+}
+.barrels-static li:first-child {
+  font-size: 16px;
+}
+.game-tickets table {
+  font-size: 25px;
+  margin: 15px 0;
+  width: 100%;
+}
+.game-tickets table td {
+  border: 1px solid #333;
+  text-align: center;
+}
+.user-add-coin td {
+  padding: 5px;
+}
+.success {
+  color: green;
+}
+.error {
+  color: red;
+}
+.coin-list {
+  min-width: 400px;
+  text-align: center;
+}
+.coin-list img {
+  width: 50px;
+}
+.coin-list tr {
+  border: 1px solid #ccc;
+}
+.coin-list td {
+  padding: 2px;
+}
+.coin-list td tr {
+  border: none;
+}
+.friend-list img {
+  width: 50px;
+}
+.friend-list tr {
+  border: 1px solid #ccc;
+}
+.friend-list td {
+  padding: 2px;
+}
+.friend-list td tr {
+  border: none;
+}
+.games-list td {
+  padding: 5px;
+}
+.games-list tr {
+  border: 1px solid #ccc;
+}
+.statistics-users img {
+  width: 50px;
+}
+.statistics-users tr {
+  border: 1px solid #ccc;
+}
+.statistics-users td {
+  padding: 5px 20px;
+}

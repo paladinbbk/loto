@@ -12,4 +12,12 @@ use Doctrine\ORM\EntityRepository;
  */
 class RoomRepository extends EntityRepository
 {
+    public function getRooms(){
+        return $this->createQueryBuilder('r')
+                ->select('r.name')
+                ->getQuery()
+                ->getResult()
+                ;
+        
+    }
 }
