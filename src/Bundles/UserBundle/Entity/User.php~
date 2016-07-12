@@ -60,9 +60,6 @@ class User extends BaseUser
      */
     public function createPlayerPostRegister()
     {
-        $new_player = new \Bundles\LotoBundle\Entity\Player;
-        $player = $new_player->setName('Name')->setUser($this->id);
-        
-        return $this->setPlayer($player);
+        return $this->setPlayer(new \Bundles\LotoBundle\Entity\Player());
     }
 }

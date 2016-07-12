@@ -1,0 +1,16 @@
+Bundles\UserBundle\Entity\User:
+    type:  entity
+    table: fos_user
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    oneToOne:
+        player:
+            targetEntity: Bundles\LotoBundle\Entity\Player
+            cascade: ["persist", "refresh", "remove"]
+            mappedBy: user
+    lifecycleCallbacks:
+        prePersist: [ createPlayerPostRegister ]
+#        postPersist: [ createPlayerPostRegister ]

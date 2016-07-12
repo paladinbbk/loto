@@ -43,8 +43,22 @@ class Room
      * @var int
      */
     private $rate;
+    
+    /**
+     * @var string
+     */
+    private $winningNumbers = '{}';
 
-
+    public function getNumbers()
+    {
+        return json_decode($this->winningNumbers);
+    }
+    
+    public function setNumbers($nums)
+    {
+        return $this->setWinningNumbers(json_encode($nums));
+    }
+    
     /**
      * Get id
      *
@@ -292,5 +306,28 @@ class Room
     public function getWinningNumber()
     {
         return $this->winningNumber;
+    }
+
+    /**
+     * Set winningNumbers
+     *
+     * @param string $winningNumbers
+     * @return Room
+     */
+    public function setWinningNumbers($winningNumbers)
+    {
+        $this->winningNumbers = $winningNumbers;
+
+        return $this;
+    }
+
+    /**
+     * Get winningNumbers
+     *
+     * @return string 
+     */
+    public function getWinningNumbers()
+    {
+        return $this->winningNumbers;
     }
 }

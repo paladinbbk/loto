@@ -66,20 +66,17 @@
 
 
         </div>
-
         <div class="container">
-                <div class="row">
+            <div class="row">
+                {% if news%}
+                    {% for article in news %}
                         <div class="col col-md-12">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quasi, quos voluptatum ullam ex corporis excepturi odit temporibus officiis? Eveniet alias facilis libero accusantium delectus est molestiae iure magni temporibus?</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quasi, quos voluptatum ullam ex corporis excepturi odit temporibus officiis? Eveniet alias facilis libero accusantium delectus est molestiae iure magni temporibus?</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quasi, quos voluptatum ullam ex corporis excepturi odit temporibus officiis? Eveniet alias facilis libero accusantium delectus est molestiae iure magni temporibus?</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quasi, quos voluptatum ullam ex corporis excepturi odit temporibus officiis? Eveniet alias facilis libero accusantium delectus est molestiae iure magni temporibus?</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quasi, quos voluptatum ullam ex corporis excepturi odit temporibus officiis? Eveniet alias facilis libero accusantium delectus est molestiae iure magni temporibus?</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quasi, quos voluptatum ullam ex corporis excepturi odit temporibus officiis? Eveniet alias facilis libero accusantium delectus est molestiae iure magni temporibus?</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quasi, quos voluptatum ullam ex corporis excepturi odit temporibus officiis? Eveniet alias facilis libero accusantium delectus est molestiae iure magni temporibus?</p>
-
+                            <h1>{{ article.title }}</h1>
+                            {{ article.content }}
                         </div>
-                </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
         </div>
 
 </div>

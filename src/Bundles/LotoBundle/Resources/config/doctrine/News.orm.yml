@@ -1,0 +1,30 @@
+Bundles\LotoBundle\Entity\News:
+    type: entity
+    table: news
+    repositoryClass: Bundles\LotoBundle\Repository\NewsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+            nullable: true
+        content:
+            type: text
+            nullable: true
+        slug:
+            type: string
+            length: 255
+            unique: true
+        createdAt:
+            type: datetime
+            column: created_at
+        updatedAt:
+            type: datetime
+            column: updated_at
+            nullable: true
+    lifecycleCallbacks: {  }

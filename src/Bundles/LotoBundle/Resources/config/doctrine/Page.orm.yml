@@ -1,0 +1,29 @@
+Bundles\LotoBundle\Entity\Page:
+    type: entity
+    table: null
+    repositoryClass: Bundles\LotoBundle\Repository\PageRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+            nullable: true
+        content:
+            type: text
+            nullable: true
+        slug:
+            type: string
+            length: 255
+        createdAt:
+            type: datetime
+            column: created_at
+        updatedAt:
+            type: datetime
+            nullable: true
+            column: updated_at
+    lifecycleCallbacks: {  }

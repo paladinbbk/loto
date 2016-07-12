@@ -286,4 +286,32 @@ class Player
     {
         return $this->roomMembers;
     }
+    /**
+     * @var \Bundles\UserBundle\Entity\User
+     */
+    private $user;
+
+
+    /**
+     * Set user
+     *
+     * @param \Bundles\UserBundle\Entity\User $user
+     * @return Player
+     */
+    public function setUser(\Bundles\UserBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \Bundles\UserBundle\Entity\User 
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 }

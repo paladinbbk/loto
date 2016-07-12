@@ -44,4 +44,11 @@ Bundles\LotoBundle\Entity\Player:
         roomMembers:
             targetEntity: RoomMember
             mappedBy: player
+    oneToOne:
+        user:
+            targetEntity: Bundles\UserBundle\Entity\User
+            invercedBy: player
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
     lifecycleCallbacks: {  }

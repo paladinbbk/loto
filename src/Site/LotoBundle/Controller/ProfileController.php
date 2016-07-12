@@ -8,7 +8,10 @@ class ProfileController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('SiteLotoBundle:Profile:index.html.twig');
+        $em = $this->get('doctrine.orm.entity_manager');
+        $news = $em->getRepository('BundlesLotoBundle:News')->getNews(2);
+        
+        return $this->render('SiteLotoBundle:Profile:index.html.twig', array('news' => $news));
     }
     
     public function resultAction()
