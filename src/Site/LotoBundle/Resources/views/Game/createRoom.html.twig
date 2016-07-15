@@ -1,0 +1,52 @@
+{% extends "SiteLotoBundle::layout.html.twig" %}
+
+{% block content %}
+<header class="header">
+    <div class="container">
+            <div class="row">
+                    <div class="col col-md-12">
+                            <nav class="top-nav">
+                                    <ul class="pull-left">
+                                            <li> <button class="btn btn-primary">Назад</button> </li>
+                                            <li>Профиль</li>
+                                            <li><button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button></li>
+                                            <li> У Вас : <span id="coins-counter">40</span> монет</li>
+                                    </ul>
+
+                            </nav>
+                    </div>
+
+            </div>
+    </div>
+</header>
+
+	<div class="profile">
+		<div class="container">
+			<div class="row">
+				<div class="col col-md-2">
+					<div class="user user-iam">
+						<div class="user-avatar">
+							<img src="/assets/img/user-iam.jpg" alt="">
+						</div>
+					
+					</div>
+
+					
+				</div>
+				<div class="col-col-md-10 col">
+					Ваше имя : <span id="name">Янык</span> <br>
+					Ваш ID : <span id="profile-id">1235432</span> <br>
+					Удалить фото :<button class="btn btn-danger" id="delete-photo"> <span class="glyphicon glyphicon-trash"></span> </button> <br>
+					Загрузить новое фото:
+					<form action="">
+						<input type="file" class="btn btn-success">
+
+						<br><br><br>
+
+						<input type="submit" class="btn btn-success" value="Сохранить">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
